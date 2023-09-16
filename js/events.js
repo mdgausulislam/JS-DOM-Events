@@ -38,3 +38,18 @@ greenButton.addEventListener('click',  function() {
  document.getElementById('make-orange').addEventListener('click',function(){
     document.body.style.backgroundColor='orange';
 })
+
+document.getElementById('btn').addEventListener('click',function(){
+    const handleSet=document.getElementById('handlers-text');
+    handleSet.innerText='Hello Bangladesh'
+})
+
+document.getElementById('btn-update').addEventListener('click',function(){
+    const inputField=document.getElementById('input-field');
+   const inputText= inputField.value;
+   const p =document.getElementById('input-text');
+   p.innerText=inputText;
+   inputText.value=' ';
+
+
+})
