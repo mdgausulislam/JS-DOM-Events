@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Events</title>
 </head>
-<body> 
+
+<body>
     <h1 onclick="console.log('i am clicked');">Dom events</h1>
     <button onclick="console.log(7);">Click Me</button>
     <button onclick="console.log(65);">Another Button</button>
 
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+    <button onclick="makeRED()">Make red</button>
+    <button id="make-blue">Make Blue</button>
+    <button id="make-purple">Make purple</button>
+
     <script src="js/events.js"></script>
+    <script>
+
+       const purpleButton=document.getElementById('make-purple');
+       purpleButton.onclick=function makePurple() {
+        document.body.style.backgroundColor='purple';
+        
+       }
+    </script>
 </body>
+
 </html>
