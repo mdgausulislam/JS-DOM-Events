@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COmment BOx</title>
+</head>
+<body>
+
+    <p id="comment-show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At vero recusandae, similique repellat repellendus soluta quas distinctio quae quidem sequi itaque laborum? Officiis id, debitis enim repellat minima illo omnis fugit dicta iste ipsum, pariatur expedita cumque ratione nesciunt dolorum libero ipsa sed magni nam amet numquam et. Tempore, commodi?</p>
+    <div>
+        <textarea name="" id="comment-text" cols="60" rows="10"></textarea> <br>
+        <button id="btn-comment">Update Comment</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById('btn-comment').addEventListener('click',function(){
+            const commentBox=document.getElementById('comment-text');
+            const commentText= commentBox.value;
+
+            const commentShow=document.getElementById('comment-show');
+            const p=document.createElement('p');
+            p.innerText=commentText;
+            commentShow.appendChild(p);
+            commentBox.value='';
+
+    
+
+        })
+    </script>
+    
+</body>
+</html>
